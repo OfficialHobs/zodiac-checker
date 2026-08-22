@@ -46,6 +46,9 @@ print(get_zodiac(3, 21))
 
 birth_date = datetime.strptime("15/08/2001", "%d/%m/%Y")
 
-print(birth_date)
-print(birth_date.month)
-print(birth_date.day)
+month = birth_date.month
+day = birth_date.day
+
+zodiac = get_zodiac(month, day)
+
+print("Your zodiac sign is:", zodiac)
