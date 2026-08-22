@@ -1,11 +1,6 @@
 from datetime import datetime
-birth_date = datetime.strptime("15/08/2001", "%d/%m/%Y")
 
-print(birth_date)
-print(birth_date.month)
-print(birth_date.day)
-
-
+# logic
 def get_zodiac(month, day):
 
     if (month == 3 and day >= 21) or (month == 4 and day <= 19):
@@ -46,3 +41,11 @@ def get_zodiac(month, day):
 
     return "Invalid date"
 print(get_zodiac(3, 21))
+
+# Logic Template. using fixed date to check the logic
+
+birth_date = datetime.strptime("15/08/2001", "%d/%m/%Y")
+
+print(birth_date)
+print(birth_date.month)
+print(birth_date.day)
