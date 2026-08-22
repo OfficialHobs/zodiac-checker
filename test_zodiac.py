@@ -40,7 +40,6 @@ def get_zodiac(month, day):
         return "Pisces"
 
     return "Invalid date"
-print(get_zodiac(3, 21))
 
 # Logic Template. using fixed date to check the logic
 
@@ -52,3 +51,12 @@ day = birth_date.day
 zodiac = get_zodiac(month, day)
 
 print("Your zodiac sign is:", zodiac)
+
+
+# test our created zodiac data whether it returns correct values from the dictionary
+from zodiac_data import zodiac_data
+
+print(zodiac_data["Leo"]["symbol"])
+print(zodiac_data["Leo"]["element"])
+print(zodiac_data["Leo"]["traits"])
+print(zodiac_data["Leo"]["matches"])
