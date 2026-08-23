@@ -60,3 +60,9 @@ print(zodiac_data["Leo"]["symbol"])
 print(zodiac_data["Leo"]["element"])
 print(zodiac_data["Leo"]["traits"])
 print(zodiac_data["Leo"]["matches"])
+
+#get all detail about the zodiac of aug 15 which is Leo
+zodiac = get_zodiac(8, 15)
+
+print(zodiac)
+print(zodiac_data[zodiac])
