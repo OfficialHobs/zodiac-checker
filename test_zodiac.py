@@ -57,10 +57,7 @@ def get_zodiac(month, day):
 # test our created zodiac data whether it returns correct values from the dictionary
 from zodiac_data import zodiac_data
 
-# print(zodiac_data["Leo"]["symbol"])
-# print(zodiac_data["Leo"]["element"])
-# print(zodiac_data["Leo"]["traits"])
-# print(zodiac_data["Leo"]["matches"])
+
 
 #get all detail about the zodiac of aug 15 which is Leo
 zodiac = get_zodiac(8, 15)
