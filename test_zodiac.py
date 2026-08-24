@@ -41,25 +41,26 @@ def get_zodiac(month, day):
 
     return "Invalid date"
 
-# Logic Template. using fixed date to check the logic
+# # Logic Template. using fixed date to check the logic--- which is 
+# # get the zodiac sign only, no information
 
-birth_date = datetime.strptime("15/08/2001", "%d/%m/%Y")
+# birth_date = datetime.strptime("15/08/2001", "%d/%m/%Y")
 
-month = birth_date.month
-day = birth_date.day
+# month = birth_date.month
+# day = birth_date.day
 
-zodiac = get_zodiac(month, day)
+# zodiac = get_zodiac(month, day)
 
-print("Your zodiac sign is:", zodiac)
+# print("Your zodiac sign is:", zodiac)
 
 
 # test our created zodiac data whether it returns correct values from the dictionary
 from zodiac_data import zodiac_data
 
-print(zodiac_data["Leo"]["symbol"])
-print(zodiac_data["Leo"]["element"])
-print(zodiac_data["Leo"]["traits"])
-print(zodiac_data["Leo"]["matches"])
+# print(zodiac_data["Leo"]["symbol"])
+# print(zodiac_data["Leo"]["element"])
+# print(zodiac_data["Leo"]["traits"])
+# print(zodiac_data["Leo"]["matches"])
 
 #get all detail about the zodiac of aug 15 which is Leo
 zodiac = get_zodiac(8, 15)
