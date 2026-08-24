@@ -1,6 +1,9 @@
+from zodiac_data import zodiac_data
 from datetime import datetime
 
 # logic
+
+
 def get_zodiac(month, day):
 
     if (month == 3 and day >= 21) or (month == 4 and day <= 19):
@@ -41,7 +44,7 @@ def get_zodiac(month, day):
 
     return "Invalid date"
 
-# # Logic Template. using fixed date to check the logic--- which is 
+# # Logic Template. using fixed date to check the logic--- which is
 # # get the zodiac sign only, no information
 
 # birth_date = datetime.strptime("15/08/2001", "%d/%m/%Y")
@@ -55,12 +58,10 @@ def get_zodiac(month, day):
 
 
 # test our created zodiac data whether it returns correct values from the dictionary
-from zodiac_data import zodiac_data
 
 
-
-#get all detail about the zodiac of aug 15 which is Leo
+# get all detail about the zodiac of aug 15 which is Leo
 zodiac = get_zodiac(8, 15)
-
+# print zodic with details
 print(zodiac)
 print(zodiac_data[zodiac])
