@@ -61,7 +61,7 @@ def get_zodiac(month, day):
 
 
 # get all detail about the zodiac of aug 15 which is Leo
-# zodiac = get_zodiac(8, 15)
-# # print zodic with details
-# print(zodiac)
-# print(zodiac_data[zodiac])
+zodiac = get_zodiac(8, 15)
+# print zodic with details
+print(zodiac)
+print(zodiac_data[zodiac])
