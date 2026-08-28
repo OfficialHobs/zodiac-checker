@@ -18,13 +18,16 @@
             <p class="subtitle">
                 Discover your zodiac sign and uncover what the stars say about you.
             </p>
-            <form action="/zodiac" method="POST">
-
+            
+            <form action="/zodiac" method="POST"> 
+            <!-- route = /zodiac, this is created in app.py-->
+            <!-- therefore the post is sent to this route -->
                 <div class="form-group">
 
                     <label for="dob">Your Date of Birth</label>
 
                     <input type="date" id="dob" name="dob" required>
+                    <!-- the name = "dob" will be used to retrieve the date in app.py -->
 
                 </div>
 
