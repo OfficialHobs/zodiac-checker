@@ -18,15 +18,21 @@
             <p class="subtitle">
                 Discover your zodiac sign and uncover what the stars say about you.
             </p>
-            <div class="form-group">
-                    
-            <label for="dob">Date Of Birth</label>
-            <input type="date" id="dob">
-            </div>
+            <form action="/zodiac" method="POST">
 
-            <button class="zodiac-btn">
-                Find my Zodiac
-            </button>
+                <div class="form-group">
+
+                    <label for="dob">Your Date of Birth</label>
+
+                    <input type="date" id="dob" name="dob" required>
+
+                </div>
+
+                <button type="submit" class="zodiac-btn">
+                    Find My Zodiac
+                </button>
+
+            </form>
         </div>
 
     </main>
