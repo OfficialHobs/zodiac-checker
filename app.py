@@ -13,11 +13,11 @@ def home():
 
 
 @app.route("/zodiac", methods=["POST"])
-
 # create function zodiac in this route to take the date
 def zodiac():
 
-    # dob stores the value of the date submitted in the form
+    # dob stores the value of the date submitted in the form using
+    # ...the request(http load) method
     dob = request.form["dob"]
 
     # birth date refine the date from regular string to actual python TIME
@@ -30,10 +30,11 @@ def zodiac():
 
     zodiac_info = zodiac_data[zodiac_sign]
 
-    print("Zodiac:", zodiac_sign)
-    print("Information:", zodiac_info)
-
-    return "Zodiac calculated successfully!"
+    return render_template(
+        "result.html",
+        zodiac_sign=zodiac_sign,
+        zodiac_info=zodiac_info
+    )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Zodiac Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="card">
+
+            <!-- the Jinja expressions is used to put python codes into html -->
+             <!-- it is called Jinja syntax -->
+            <div class="icon">
+                {{ zodiac_info.symbol }} 
+            </div>
+
+            <h1>{{ zodiac_sign }}</h1>
+
+            <p class="subtitle">
+                Your zodiac element is {{ zodiac_info.element }}.
+            </p>
+
+            <h2>Characteristics</h2>
+
+            <!-- Jinja join expressions are used to insert Python data into HTML -->
+            <p>
+                {{ zodiac_info.traits | join(" • ") }}
+            </p>
+
+            <h2>Strengths</h2>
+
+            <p>
+                {{ zodiac_info.strengths | join(" • ") }}
+            </p>
+
+            <h2>Weaknesses</h2>
+
+            <p>
+                {{ zodiac_info.weaknesses | join(" • ") }}
+            </p>
+
+            <h2>Best Matches</h2>
+
+            <p>
+                {{ zodiac_info.matches | join(" • ") }}
+            </p>
+
+            <br>
+
+            <a href="/">
+                Check Another Date
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
