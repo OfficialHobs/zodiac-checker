@@ -42,7 +42,8 @@ def zodiac():
     return render_template(
         "result.html",
         zodiac_sign=zodiac_sign,
-        zodiac_info=zodiac_info
+        zodiac_info=zodiac_info,
+        matches=matches
     )
 
 

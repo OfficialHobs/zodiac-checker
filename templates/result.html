@@ -47,11 +47,23 @@
                 {{ zodiac_info.weaknesses | join(" • ") }}
             </p>
 
-            <h2>Best Matches</h2>
+    <h2>❤️ Best Matches</h2>
+
+    {% for match in matches %}
+
+        <div class="match">
+
+            <h3>
+                {{ match.symbol }} {{ match.name }}
+            </h3>
 
             <p>
-                {{ zodiac_info.matches | join(" • ") }}
+                {{ match.element }} sign
             </p>
+
+        </div>
+
+    {% endfor %}
 
             <br>
 
