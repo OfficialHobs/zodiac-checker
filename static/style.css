@@ -1,97 +1,77 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: arial, sans-serif;
-    background: linear-gradient(135deg, #1a103d, #3b1f5c);
+body {
+    font-family: Arial, sans-serif;
     min-height: 100vh;
-
+    background: #f5f3ff;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    color: white;
-
+    padding: 30px;
 }
 
-.container{
+.container {
     width: 100%;
-    max-width: 500px;
-    padding: 20px;
+    max-width: 700px;
 }
 
-.card{
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-
-    padding: 40px;
+.card {
+    background: white;
     border-radius: 20px;
-
+    padding: 40px;
     text-align: center;
-
-    box-shadow: 0, 20px, 50px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .icon {
-    font-size: 50px;
+    font-size: 70px;
     margin-bottom: 15px;
 }
 
 h1 {
-    font-size: 36px;
-    margin-bottom: 15px;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
 .subtitle {
-    color: #d6cdea;
-    line-height: 1.6;
+    color: #666;
     margin-bottom: 30px;
 }
 
-.form-group {
-    text-align: left;
-    margin-bottom: 25px;
+h2 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-size: 22px;
 }
 
-label {
-    display: block;
+h3 {
+    font-size: 20px;
     margin-bottom: 8px;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.match {
+    background: #f8f7ff;
+    border-radius: 12px;
+    padding: 18px;
+    margin-top: 12px;
+}
+
+.match p {
+    font-size: 14px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
     font-weight: bold;
-}
-
-input[type="date"] {
-    width: 100%;
-    padding: 14px;
-
-    border: none;
-    border-radius: 10px;
-
-    font-size: 16px;
-    outline: none;
-}
-
-.zodiac-btn {
-    width: 100%;
-    padding: 15px;
-
-    border: none;
-    border-radius: 10px;
-
-    background: #8b5cf6;
-    color: white;
-
-    font-size: 17px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.zodiac-btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
 }

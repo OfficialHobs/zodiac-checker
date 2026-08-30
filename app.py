@@ -35,10 +35,16 @@ def zodiac():
     matches = []
 # for each match which is aries in match names which is aries, aquirus for example
 # update the list called matches
-#  with the values(informations) of the matches(zodiac data =match)
+#  with the values(informations) of those matches(zodiac data =match)
     for match in match_names:
-        matches.append(zodiac_data[match])
+       match_info = zodiac_data[match]
 
+    matches.append({
+        "name": match,
+        "symbol": match_info["symbol"],
+        "element": match_info["element"]
+    })
+    
     return render_template(
         "result.html",
         zodiac_sign=zodiac_sign,
