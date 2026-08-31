@@ -27,29 +27,34 @@ def zodiac():
     day = birth_date.day
 
     zodiac_sign = get_zodiac(month, day)
+    #zodiac sign = aries
 
     zodiac_info = zodiac_data[zodiac_sign]
+    #zodiac info = details about the zodiac sign
 
     match_names = zodiac_info["matches"]
+    #match names =matches ---gotten from zodiac info
 
     matches = []
-# for each match which is aries in match names which is aries, aquirus for example
-# update the list called matches
-#  with the values(informations) of those matches(zodiac data =match)
     for match in match_names:
-       match_info = zodiac_data[match]
+# for each match in match names 
+# update the list called matches
+# with the values(informations) of those matches(zodiac data =match)
 
-    matches.append({
-        "name": match,
-        "symbol": match_info["symbol"],
-        "element": match_info["element"]
-    })
-    
+        match_info = zodiac_data[match]
+
+        matches.append({
+            "name": match,
+            "symbol": match_info["symbol"],
+            "element": match_info["element"]
+        })
+
     return render_template(
         "result.html",
         zodiac_sign=zodiac_sign,
         zodiac_info=zodiac_info,
-        matches=matches
+        matches=matches,
+        dob=dob
     )
 
 

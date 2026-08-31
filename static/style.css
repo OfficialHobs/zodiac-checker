@@ -75,3 +75,50 @@ a {
     text-decoration: none;
     font-weight: bold;
 }
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tag {
+    background: #f0edff;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #4b3f8f;
+    font-weight: 500;
+}
+
+.matches {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.match {
+    background: #f8f7ff;
+    border-radius: 15px;
+    padding: 20px 10px;
+    transition: transform 0.2s ease;
+}
+
+.match:hover {
+    transform: translateY(-4px);
+}
+
+.match-symbol {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.match h3 {
+    margin-bottom: 5px;
+}
+
+.match p {
+    font-size: 13px;
+}

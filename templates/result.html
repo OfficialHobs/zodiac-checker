@@ -24,6 +24,10 @@
 
             <h1>{{ zodiac_sign }}</h1>
 
+            <p class="birth-date">
+                Born: {{ dob }}
+            </p>
+
             <p class="subtitle">
                 Your zodiac element is {{ zodiac_info.element }}.
             </p>
@@ -31,39 +35,75 @@
             <h2>Characteristics</h2>
 
             <!-- Jinja join expressions are used to insert Python data into HTML -->
-            <p>
-                {{ zodiac_info.traits | join(" • ") }}
-            </p>
+            <div class="tags">
+
+                {% for trait in zodiac_info.traits %}
+
+                    <span class="tag">
+                        {{ trait }}
+                    </span>
+
+                {% endfor %}
+
+            </div>
 
             <h2>Strengths</h2>
 
-            <p>
-                {{ zodiac_info.strengths | join(" • ") }}
-            </p>
+            <div class="tags">
+
+                {% for strength in zodiac_info.strengths %}
+
+                    <span class="tag">
+                        {{ strength }}
+                    </span>
+
+                {% endfor %}
+
+            </div>
 
             <h2>Weaknesses</h2>
 
-            <p>
-                {{ zodiac_info.weaknesses | join(" • ") }}
-            </p>
+            <div class="tags">
 
-    <h2>❤️ Best Matches</h2>
+                {% for weakness in zodiac_info.weaknesses %}
 
-    {% for match in matches %}
+                    <span class="tag">
+                        {{ weakness }}
+                    </span>
 
-        <div class="match">
+                {% endfor %}
 
-            <h3>
-                {{ match.symbol }} {{ match.name }}
-            </h3>
+            </div>
 
-            <p>
-                {{ match.element }} sign
-            </p>
+            <h2>❤️ Best Matches</h2>
+            <p>Number of matches: {{ matches | length }}</p>
+            {% for match in matches %}
 
-        </div>
+            <div class="matches">
 
-    {% endfor %}
+                {% for match in matches %}
+
+                    <div class="match">
+
+                        <div class="match-symbol">
+                            {{ match.symbol }}
+                        </div>
+
+                        <h3>
+                            {{ match.name }}
+                        </h3>
+
+                        <p>
+                            {{ match.element }} sign
+                        </p>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+            {% endfor %}
 
             <br>
 
