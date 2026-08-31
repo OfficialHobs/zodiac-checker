@@ -76,32 +76,24 @@
             </div>
 
             <h2>❤️ Best Matches</h2>
-            <p>Number of matches: {{ matches | length }}</p>
+
             {% for match in matches %}
 
-            <div class="matches">
+                <div class="match">
 
-                {% for match in matches %}
-
-                    <div class="match">
-
-                        <div class="match-symbol">
-                            {{ match.symbol }}
-                        </div>
-
-                        <h3>
-                            {{ match.name }}
-                        </h3>
-
-                        <p>
-                            {{ match.element }} sign
-                        </p>
-
+                    <div class="match-symbol">
+                        {{ match.symbol }}
                     </div>
 
-                {% endfor %}
+                    <h3>
+                        {{ match.name }}
+                    </h3>
 
-            </div>
+                    <p>
+                        {{ match.element }} sign
+                    </p>
+
+                </div>
 
             {% endfor %}
 
