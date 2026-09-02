@@ -4,38 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Zodiac Checker</title>
-    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
-<body>
-    <main class="container">
-        <div class="card">
-            <div class="icon">
-                ✨
-            </div>
-            <h1>Zodiac Checker</h1>
-            <p class="subtitle">
+<body class="home-page">
+
+    <main class="home-container">
+
+        <div class="home-card">
+
+            <div class="home-icon">✨</div>
+
+            <h1 class="home-title">
+                Zodiac Checker
+            </h1>
+
+            <p class="home-subtitle">
                 Discover your zodiac sign and uncover what the stars say about you.
             </p>
-            
-            <form action="/zodiac" method="POST"> 
-            <!-- route = /zodiac, this is created in app.py-->
-            <!-- therefore the post is sent to this route -->
-                <div class="form-group">
 
-                    <label for="dob">Your Date of Birth</label>
+            <form action="/zodiac" method="POST">
 
-                    <input type="date" id="dob" name="dob" required>
-                    <!-- the name = "dob" will be used to retrieve the date in app.py -->
+                <div class="home-form-group">
+
+                    <label for="dob">
+                        Your Date of Birth
+                    </label>
+
+                    <input
+                        type="date"
+                        id="dob"
+                        name="dob"
+                        required
+                    >
 
                 </div>
 
-                <button type="submit" class="zodiac-btn">
+                <button type="submit" class="home-button">
                     Find My Zodiac
                 </button>
 
             </form>
+
         </div>
 
     </main>
