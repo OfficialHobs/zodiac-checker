@@ -6,7 +6,7 @@
     margin: 0;
     min-height: 100vh;
     font-family: Arial, sans-serif;
-    background: #f5f3ff;
+    background: #745cef;
 }
 
 .home-container {
@@ -23,7 +23,7 @@
     width: 100%;
     max-width: 500px;
 
-    background: white;
+    background: rgb(255, 255, 255);
 
     padding: 50px 40px;
 
@@ -226,4 +226,135 @@ a {
 
 .match p {
     font-size: 13px;
+}
+
+
+
+
+/* =========================
+   LANDING PAGE POLISH
+   ========================= */
+
+.home-page {
+    color: #1f1f2e;
+}
+
+.home-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Small decorative glow */
+.home-card::before {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: #eeeaff;
+
+    top: -90px;
+    right: -90px;
+
+    z-index: 0;
+}
+
+.home-icon,
+.home-title,
+.home-subtitle,
+.home-form-group,
+.home-button {
+    position: relative;
+    z-index: 1;
+}
+
+.home-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-title {
+    letter-spacing: -1px;
+}
+
+.home-subtitle {
+    font-size: 15px;
+}
+
+.home-form-group input {
+    width: 220px;
+
+    background: #faf9ff;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.home-form-group input:focus {
+    border-color: #6c5ce7;
+
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.12);
+}
+
+.home-button {
+    min-width: 180px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.home-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(108, 92, 231, 0.25);
+}
+
+.home-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .home-container {
+        padding: 20px;
+    }
+
+    .home-card {
+        padding: 40px 25px;
+    }
+
+    .home-title {
+        font-size: 34px;
+    }
+
+    .home-subtitle {
+        font-size: 14px;
+    }
+
 }
