@@ -1,2 +1,2 @@
 flask
-ide-prefferably code
+ide-prefferably visual studio code
